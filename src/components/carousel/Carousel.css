@@ -1,9 +1,13 @@
 .carousel {
-    max-width: 75vw;
+    width: 900px;
     margin: 0 auto;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel .item {
@@ -51,4 +55,31 @@
     font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--primary-color);
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;    
+}
+
+.buttons button:first-child img {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 600px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel {
+        width: 300px;
+    }
 }
