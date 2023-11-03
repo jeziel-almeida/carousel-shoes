@@ -46,7 +46,7 @@
     }
     
     .btn-signin {
-        background-color: #ff8847;
+        background-color: var(--primary-color);
     }
     
     .btn-signin:hover {
@@ -54,7 +54,7 @@
     }
     
     .btn-login {
-        background-color: #00b3f9;
+        background-color: var(--secondary-color);
     }
     
     .btn-login:hover {
