@@ -1,19 +1,23 @@
-import React from 'react'
+import './Carousel.css';
 
-const Carousel = () => {
+const Carousel = ({ data }) => {
     return (
         <div className="carousel">
-            <div className="item">
-                <div className="image">
-                    <img src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg" alt="Super shoe 1" />
+            {data.map((item) => (
+
+                <div key={item.id} className="item">
+                    <div className="image">
+                        <img src={item.image} alt={item.name} />
+                    </div>
+
+                    <div className="info">
+                        <span className="name">{item.name}</span>
+                        <span className="oldPrice">U$ {item.oldPrice}</span>
+                        <span className="price">U$ {item.price}</span>
+                    </div>
                 </div>
 
-                <div className="info">
-                    <span className="name">Super shoe 1</span>
-                    <span className="oldPrice">U$ 299.00</span>
-                    <span className="price">U$ 199.00</span>
-                </div>
-            </div>
+            ))}
         </div>
     )
 }
