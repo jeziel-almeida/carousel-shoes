@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
 
     const fetchData = async () => {
-      const res = await fetch('http://localhost:3000/static/shoes.json');
+      const res = await fetch(process.env.REACT_APP_API_URL);
       const data = await res.json();
       setShoes(data);
     }
