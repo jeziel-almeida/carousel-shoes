@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Carousel from './components/carousel/Carousel';
 import Header from './components/header/Header';
+import Loading from './components/loading/Loading';
 
 function App() {
 
@@ -19,14 +20,12 @@ function App() {
 
   }, [])
 
-  if(!shoes || !shoes.length) return null;
-
   return (
     <>
       <Header />
       <div className='container'>
         
-        <Carousel data={shoes} />
+        {shoes.length ? <Carousel data={shoes} /> : <Loading /> }
         
       </div>
     </>
